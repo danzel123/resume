@@ -39,6 +39,8 @@
     .date, .job-role, .product-heading span { color: var(--muted); font-size: .9rem; }
     .job-role { margin: .15rem 0 1.5rem; }
     .product-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem 1rem; margin: 1.75rem 0 .75rem; }
+    .job-heading h2 a, .product-heading h3 a { text-decoration: underline; text-decoration-color: #aeb8be; text-underline-offset: .18em; }
+    .job-heading h2 a:hover, .product-heading h3 a:hover { text-decoration-color: currentColor; }
     .product-heading h3 { margin: 0; color: var(--ink); font-size: 1.2rem; line-height: 1.4; }
     ul { list-style: none; margin: 0; padding: 0; }
     li { position: relative; padding-left: 1rem; margin-bottom: .65rem; }
@@ -94,9 +96,9 @@
       <p><strong>Основной стек:</strong> TypeScript, Angular, NgRx, RxJS, JavaScript, HTML, SCSS</p>
     </div>
     <div class="section-label">Опыт работы</div>
-    <div class="job-heading"><h2>Глабикс</h2><span class="date">Октябрь 2022 — настоящее время</span></div>
+    <div class="job-heading"><h2><a href="https://glabix.com/" target="_blank" rel="noopener noreferrer">Глабикс</a></h2><span class="date">Октябрь 2022 — настоящее время</span></div>
     <p class="job-role">Frontend-разработчик · <a href="https://glabix.com">glabix.com</a></p>
-    <div class="product-heading"><h3>Глабикс.Экран</h3><span>Запись экрана и работа с видео</span></div>
+    <div class="product-heading"><h3><a href="https://glabix.com/screen" target="_blank" rel="noopener noreferrer">Глабикс.Экран</a></h3><span>Запись экрана и работа с видео</span></div>
     <p>Участвовал в создании продукта от обсуждения концепции и разработки MVP до выпуска в production и последующего сопровождения.</p>
     <ul>
       <li><strong>Браузерный рекордер:</strong> самостоятельно реализовал запись видео в браузере — аналог desktop-приложения.</li>
@@ -105,7 +107,7 @@
       <li><strong>Загрузка файлов:</strong> улучшил работу при медленном и нестабильном соединении, сохранив отзывчивость интерфейса; реализовывал восстановление браузерных загрузок через IndexedDB.</li>
       <li><strong>Разработка продукта:</strong> участвовал в разработке Electron-приложения; разрабатывал клиентскую часть, админ-панель, лендинги и интеграции с Bitrix24, amoCRM, Яндекс.Метрикой и Roistat.</li>
     </ul>
-    <div class="product-heading"><h3>Глабикс.Летучка</h3><span>Управление задачами и командная работа</span></div>
+    <div class="product-heading"><h3><a href="https://glabix.com/letuchka" target="_blank" rel="noopener noreferrer">Глабикс.Летучка</a></h3><span>Управление задачами и командная работа</span></div>
     <ul>
       <li>Разрабатывал задачи и подзадачи, Kanban, планирование рабочего дня, настройку статусов, управление командами, ролями и приглашениями.</li>
       <li>Реализовал клиентский store и реактивное обновление интерфейса по WebSocket-событиям и ответам API для совместной работы с задачами.</li>

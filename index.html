@@ -4,121 +4,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Денис Кривошапко — Senior Frontend Developer. Angular, TypeScript и AI-driven development. Опыт, проекты и контакты.">
-  <meta name="theme-color" content="#17685f">
+  <meta name="theme-color" content="#ffffff">
   <title>Денис Кривошапко — Senior Frontend Developer</title>
   <style>
+
     @font-face { font-family: Lato; src: url('assets/lato-1.ttf') format('truetype'); font-style: normal; font-weight: 400; font-display: swap; }
     @font-face { font-family: Lato; src: url('assets/lato-2.ttf') format('truetype'); font-style: normal; font-weight: 700; font-display: swap; }
     * { box-sizing: border-box; }
-    @page { size: A4; margin: 0; }
-    :root { --ink: #192b33; --text: #35434b; --muted: #6b767b; --accent: #17685f; --rule: #dbe3e2; --wash: #f0f6f4; }
-    body { margin: 0; color: var(--text); background: #e7ebea; font-family: Lato, sans-serif; font-size: 10.2pt; line-height: 1.34; font-variant-numeric: lining-nums proportional-nums; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .page { width: 210mm; height: 297mm; padding: 15mm 17mm 14mm; margin: 9mm auto; background: #fff; position: relative; overflow: hidden; }
+    :root { --ink: #192b33; --text: #35434b; --muted: #626e75; --rule: #dfe4e7; }
+    body { margin: 0; background: #fff; color: var(--text); font: 400 1rem/1.65 Lato, sans-serif; font-synthesis: none; font-variant-numeric: lining-nums proportional-nums; }
+    .resume { max-width: 960px; margin: 0 auto; padding: 3rem; }
     a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    .contacts a:hover, a[href^="https:"]:hover { text-decoration: underline; }
     strong { color: var(--ink); font-weight: 700; }
-    p { margin: 0 0 7px; }
-    .hero { display: grid; grid-template-columns: 1fr 34mm; gap: 9mm; padding-bottom: 15px; border-bottom: 1px solid var(--rule); }
-    .eyebrow { font-size: 7.2pt; text-transform: uppercase; letter-spacing: 1.45px; font-weight: 650; color: var(--accent); margin-bottom: 7px; }
-    h1 { font-size: 27pt; line-height: 1.05; letter-spacing: -1.3px; margin: 0 0 9px; font-weight: 700; color: var(--ink); }
-    .role { font-size: 15.5pt; line-height: 1.34; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-    .specialty { color: var(--accent); font-size: 10.5pt; font-weight: 400; }
-    .contacts { margin-top: 13px; font-size: 9.5pt; line-height: 1.34; color: var(--text); }
-    .contacts a { display: inline-flex; align-items: center; gap: 5.5pt; white-space: nowrap; }
-    .contact-icon { width: 11.5pt; height: 11.5pt; flex: 0 0 11.5pt; color: var(--text); }
-    .contact-row { display: flex; gap: 15px; flex-wrap: wrap; }
-    .portrait { width: 34mm; height: 43mm; position: relative; overflow: hidden; border-radius: 5px; background: #ece7dd; align-self: start; }
+    p { margin: 0 0 .8rem; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 128px; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+    h1 { margin: 0 0 .5rem; color: var(--ink); font-size: clamp(1.9rem, 5vw, 2.75rem); line-height: 1.1; letter-spacing: -.04em; }
+    .role { color: var(--ink); font-size: 1.35rem; font-weight: 700; }
+    .specialty { margin-top: .25rem; font-size: 1rem; }
+    .contacts { margin-top: 1rem; font-size: .95rem; }
+    .contacts a { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; max-width: 100%; overflow-wrap: anywhere; }
+    .contacts a span { min-width: 0; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+    .contact-icon { width: 1rem; height: 1rem; flex: 0 0 1rem; }
+    .download-button { display: inline-flex; justify-content: center; align-items: center; min-height: 44px; margin-top: 1rem; padding: .5rem 1rem; border: 1px solid #c4cdd2; border-radius: 6px; background: #fff; color: var(--ink); font-weight: 700; }
+    .download-button:hover { background: #f3f5f6; border-color: var(--ink); }
+    .portrait { width: 128px; height: 163px; position: relative; overflow: hidden; border-radius: 5px; align-self: start; }
     .portrait img { position: absolute; width: 270%; max-width: none; height: auto; left: -53%; top: -60%; }
-    .summary { margin: 13px 0 14px; font-size: 10.2pt; line-height: 1.4; }
-    .section-label { font-size: 7.6pt; line-height: 1.1; text-transform: uppercase; letter-spacing: 1.35px; color: var(--accent); font-weight: 700; margin: 0 0 8px; }
-    .ai-block { border-left: 1.5px solid var(--accent); padding: 0 15px 8px; margin-bottom: 16px; }
-    .ai-block h2 { font-size: 12.6pt; letter-spacing: -.25px; margin: 0 -15px 10px; padding: 6px 15px; background: var(--wash); color: var(--ink); font-weight: 700; }
-    .ai-intro { font-size: 8.7pt; margin-bottom: 7px; color: #486059; }
+    .summary { margin: 2rem 0; }
+    .section-label { margin: 1.75rem 0 .85rem; color: var(--ink); font-size: 1rem; line-height: 1.4; font-weight: 700; }
+    .job-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .3rem 1rem; }
+    .job-heading h2 { margin: 0; font-size: 1.65rem; line-height: 1.35; color: var(--ink); }
+    .date, .job-role, .product-heading span { color: var(--muted); font-size: .9rem; }
+    .job-role { margin: .15rem 0 1.5rem; }
+    .product-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem 1rem; margin: 1.75rem 0 .75rem; }
+    .product-heading h3 { margin: 0; color: var(--ink); font-size: 1.2rem; line-height: 1.4; }
     ul { list-style: none; margin: 0; padding: 0; }
-    li { position: relative; padding-left: 12px; margin-bottom: 5px; }
-    li::before { content: ''; position: absolute; left: 0; top: .66em; width: 3px; height: 3px; background: var(--accent); border-radius: 50%; }
+    li { position: relative; padding-left: 1rem; margin-bottom: .65rem; }
+    li::before { content: ''; position: absolute; left: 0; top: .75em; width: 3px; height: 3px; background: #697680; border-radius: 50%; }
     li:last-child { margin-bottom: 0; }
-    .ai-block ul { font-size: 10.2pt; line-height: 1.34; }
-    .job-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 2px; }
-    .job-heading h2 { font-size: 15.5pt; line-height: 1.34; color: var(--ink); letter-spacing: -.4px; margin: 0; font-weight: 700; }
-    .date, .job-role, .product-heading span, .running-head span, .continuation { font-size: 9.2pt; line-height: 1.34; font-weight: 400; color: var(--muted); }
-    .date { white-space: nowrap; }
-    .job-role { margin-bottom: 11px; }
-    .product-heading { display: flex; align-items: baseline; gap: 10px; margin-bottom: 7px; }
-    .product-heading h3 { margin: 0; font-size: 11.7pt; line-height: 1.34; color: var(--ink); font-weight: 700; letter-spacing: -.2px; }
-    .stack-line { font-size: 8.2pt; line-height: 1.5; color: var(--muted); margin-top: 10px; }
-    .footer { position: absolute; bottom: 9mm; left: 17mm; right: 17mm; display: flex; justify-content: space-between; border-top: 1px solid var(--rule); padding-top: 7px; font-size: 7.3pt; color: var(--muted); }
-    .running-head { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid var(--rule); margin-bottom: 16px; color: var(--ink); font-size: 10.2pt; font-weight: 700; }
-    .continuation { margin-bottom: 6px; }
-    .team-note { margin-top: 9px; font-size: 10.2pt; color: var(--text); line-height: 1.34; }
-    .previous { margin-top: 16px; padding-top: 13px; border-top: 1px solid var(--rule); }
-    .previous li { margin-bottom: 6px; }
-    .skills { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--rule); }
-    .skill-row { display: block; margin-bottom: 6px; font-size: 10.2pt; line-height: 1.34; }
+    .experience-block, .previous, .skills, .bottom-grid, .details { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+    .experience-block > .section-label, .skills > .section-label, .education > .section-label { margin-top: 0; }
+    .team-note { margin-top: .75rem; color: var(--muted); font-size: .95rem; }
+    dl { margin: 0; }
+    .skill-row { margin-bottom: .5rem; }
     .skill-row dt { display: inline; color: var(--ink); font-weight: 700; }
     .skill-row dt::after { content: ': '; }
-    .skill-row dd { display: inline; margin: 0; color: var(--text); }
-    dl { margin: 0; }
-    .bottom-grid { display: block; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--rule); }
-    .details { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rule); }
-    .education p, .details p { font-size: 10.2pt; line-height: 1.34; margin-bottom: 6px; }
-    .education .status { color: var(--muted); }
-    .details .small { font-size: 7.7pt; color: var(--muted); }
-    .page2 { font-size: 10.2pt; }
-    @media print { body { background: #fff; } .page { margin: 0; break-after: page; } .page:last-child { break-after: auto; } }
-
-    /* Web presentation; the downloadable PDF retains the two-page layout. */
-    @media screen {
-      body { font-size: 1rem; line-height: 1.6; background: #edf1f0; font-synthesis: none; }
-      .page { width: min(100% - 2rem, 960px); height: auto; min-height: 0; padding: clamp(1.25rem, 4vw, 3rem); margin: 1.5rem auto; overflow: visible; border-radius: 10px; }
-      .hero { grid-template-columns: minmax(0,1fr) 128px; gap: 2rem; padding-bottom: 1.5rem; }
-      h1 { font-size: clamp(1.9rem, 5vw, 2.75rem); letter-spacing: -.04em; line-height: 1.1; }
-      .role { font-size: 1.35rem; }
-      .specialty { font-size: 1rem; }
-      .portrait { width: 128px; height: 163px; }
-      .summary, .team-note, .page2, .skill-row, .education p, .details p { font-size: 1rem; line-height: 1.6; }
-      .summary { margin: 1.5rem 0; }
-      .contacts { font-size: .95rem; line-height: 1.6; }
-      .contacts a { max-width: 100%; white-space: normal; overflow-wrap: anywhere; min-height: 36px; }
-      .contacts a span { min-width: 0; }
-      .contact-row { gap: .5rem 1.25rem; }
-      .section-label { font-size: 1rem; line-height: 1.4; text-transform: none; letter-spacing: normal; margin: 1.5rem 0 .75rem; }
-      .job-heading h2 { font-size: 1.65rem; }
-      .date, .job-role, .product-heading span, .running-head span, .continuation { font-size: .9rem; }
-      .job-heading, .product-heading, .running-head { flex-wrap: wrap; gap: .3rem 1rem; }
-      .product-heading { margin: 1.5rem 0 .75rem; }
-      .product-heading h3 { font-size: 1.2rem; }
-      .running-head { font-size: 1rem; margin-bottom: 1rem; }
-      li { padding-left: 1rem; margin-bottom: .65rem; }
-      p { margin-bottom: .75rem; }
-      .footer { display: none; }
-      .previous, .skills, .bottom-grid, .details { margin-top: 1.5rem; padding-top: 1.5rem; }
-      .download-bar { width: min(100% - 2rem, 960px); margin: 1.5rem auto 0; display: flex; justify-content: flex-end; }
-      .download-button { display: inline-flex; align-items: center; justify-content: center; padding: .65rem 1.1rem; border-radius: 6px; background: #17685f; color: white; font-size: 1rem; font-weight: 700; min-height: 44px; }
-      .download-button:hover { background: #124f48; }
-      a:focus-visible { outline: 3px solid #17685f; outline-offset: 4px; }
-      .contacts a:hover, a[href^="https:"]:hover { text-decoration: underline; }
-    }
-    @media screen and (max-width: 540px) {
-      .hero { grid-template-columns: minmax(0,1fr) 78px; gap: .75rem; }
-      .portrait { width: 78px; height: 100px; }
+    .skill-row dd { display: inline; margin: 0; }
+    @media (max-width: 540px) {
+      .resume { padding: 1.5rem 1.25rem; }
+      .hero { grid-template-columns: minmax(0,1fr) 78px; gap: .65rem .75rem; }
+      .hero > div:first-child { display: contents; }
+      .hero h1, .hero .role, .hero .specialty { grid-column: 1; margin: 0; }
       h1 { font-size: 1.8rem; }
       .role { font-size: 1.1rem; }
       .specialty { font-size: .9rem; }
-      .contacts { grid-column: 1 / -1; }
-      .hero > div:first-child { display: contents; }
-      .hero h1, .hero .role, .hero .specialty { grid-column: 1; margin: 0; }
-      .portrait { grid-column: 2; grid-row: 1 / 4; }
+      .contacts, .download-button { grid-column: 1 / -1; }
+      .download-button { justify-self: start; margin-top: .5rem; }
       .contact-row { flex-direction: column; gap: .2rem; }
-      .page { width: calc(100% - 1rem); margin: .75rem auto; padding: 1.25rem; }
-      .download-bar { width: calc(100% - 1rem); margin-top: .75rem; }
-      .date { white-space: normal; }
+      .portrait { grid-column: 2; grid-row: 1 / 4; width: 78px; height: 100px; }
     }
-    @media print { .download-bar { display: none; } }
+    @media print {
+      .resume { max-width: none; padding: 0; }
+      .download-button { display: none; }
+      .hero, .product-heading, .job-heading, .section-label { break-inside: avoid; }
+      .section-label, .product-heading, .job-heading { break-after: avoid; }
+    }
   </style>
 </head>
 <body>
-  <nav class="download-bar" aria-label="Скачать резюме"><a class="download-button" href="Denis_Krivoshapko_CV.pdf" download>Скачать PDF</a></nav>
-  <section class="page page1" aria-label="Страница 1">
+  <main class="resume" aria-label="Резюме Дениса Кривошапко">
     <header class="hero">
       <div>
         <h1>Денис Кривошапко</h1>
@@ -128,6 +84,7 @@
           <div><a href="mailto:krivoshapkodenis98@gmail.com"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5 L21 5 L21 19 L3 19 Z M3 6 L12 13 L21 6"/></svg><span>krivoshapkodenis98@gmail.com</span></a></div>
           <div class="contact-row"><a href="https://t.me/im_danzel123"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 L14.2 21 L10.3 13.7 L3 9.8 Z M10.3 13.7 L21 3"/></svg><span>@im_danzel123</span></a><a href="tel:+79041324834"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 15.4 L16.6 13.9 C16 13.6 15.3 13.8 14.9 14.3 L13.3 16.2 C10.5 14.8 8.2 12.5 6.8 9.7 L8.7 8.1 C9.2 7.7 9.4 7 9.1 6.4 L7.6 2.8 C7.3 2.1 6.5 1.8 5.8 2 L3.3 2.8 C2.5 3.1 2 3.8 2 4.6 C2.7 13.8 10.2 21.3 19.4 22 C20.2 22 20.9 21.5 21.2 20.7 L22 18.2 C22.2 17.5 21.7 16.2 20.2 15.4 Z"/></svg><span>+7 904 132-48-34</span></a></div>
         </div>
+        <a class="download-button" href="Denis_Krivoshapko_CV.pdf" download>Скачать PDF</a>
       </div>
       <div class="portrait"><img src="assets/portrait.jpg" alt="Денис Кривошапко"></div>
     </header>
@@ -154,29 +111,30 @@
       <li>Реализовал клиентский store и реактивное обновление интерфейса по WebSocket-событиям и ответам API для совместной работы с задачами.</li>
       <li>Разрабатывал текстовый редактор, встроенный в тело задачи: форматирование, списки, ссылки, файлы, автосохранение и клавиатурное управление.</li>
     </ul>
-    <h2 class="section-label" style="margin-top: 10px">Команда и планирование</h2>
+    <section class="experience-block">
+    <h2 class="section-label">Команда и планирование</h2>
     <p>Работал по Scrum: спринты 1–2 недели, планирование, ежедневные синки и демо. Декомпозировал и оценивал задачи.</p>
     <p class="team-note">Команда — до 4 frontend- и 3–4 backend-разработчиков, Product Owner, дизайнер и QA. Позже работал без выделенных дизайнера и QA.</p>
-    <footer class="footer"><span>Денис Кривошапко · Senior Frontend Developer</span><span>01 / 02</span></footer>
-  </section>
-
-  <section class="page page2" aria-label="Страница 2">
-    <div class="running-head">Денис Кривошапко <span>AI · команда · технологии</span></div>
-
-    <p class="continuation">Глабикс · разработка с агентами и работа в команде</p>
+    </section>
+    <section class="experience-block">
     <h2 class="section-label">Разработка с AI-агентами</h2>
     <p>Работаю по подходу AI-driven development. Преобразую устные запросы CEO и Product Owner в требования: описываю бизнес-логику, пользовательские сценарии и крайние случаи.</p>
     <p>Проверяю и уточняю агентный план, привлекаю отдельного агента для ревью плана и кода. Согласовываю API с backend-разработчиками; при их отсутствии организую реализацию backend через агента и проверяю интеграцию.</p>
     <p>На dev-стенде проверяю бизнес-сценарии, UX и соответствие UI-киту; дорабатываю фичу итерациями, проверяю соответствие спецификациям и запускаю тесты перед релизом. Учитываю ограничения агентов в реальных процессах, требования безопасности и правила обработки персональных данных.</p>
-    <h2 class="section-label" style="margin-top: 10px">Внедрение агентов в бизнес-процессы</h2>
+    </section>
+    <section class="experience-block">
+    <h2 class="section-label">Внедрение агентов в бизнес-процессы</h2>
     <ul>
       <li>Перевожу бизнес-процессы в агентные сценарии и объединяю несколько информационных систем в единый процесс: рассылки, ABM-маркетинг, вебинарные воронки и сквозная аналитика лидов.</li>
       <li>Участвовал в создании AI-системы внутреннего интернет-издания для маркетинга. Обучал коллег вне разработки работе с агентами.</li>
     </ul>
-    <h2 class="section-label" style="margin-top: 10px">Командная и кросс-функциональная работа</h2>
+    </section>
+    <section class="experience-block">
+    <h2 class="section-label">Командная и кросс-функциональная работа</h2>
     <ul>
       <li>Согласовывал решения с CEO, Product Owner, дизайнерами и QA. Передавал контекст backend-разработчикам, координировал задачи при совместной работе над одним модулем. Для поддержки и бэк-офиса разрабатывал рабочие интерфейсы и админ-панель, разбирал обращения.</li>
     </ul>
+    </section>
     <section class="previous">
       <div class="job-heading"><h2>Сумма АйТи</h2><span class="date">Июнь 2020 — октябрь 2022</span></div>
       <p class="job-role">Full-stack web-разработчик · <a href="https://www.itsumma.ru">itsumma.ru</a></p>
@@ -206,7 +164,6 @@
       </section>
     </div>
 
-    <footer class="footer"><a href="mailto:krivoshapkodenis98@gmail.com">krivoshapkodenis98@gmail.com</a><span>02 / 02</span></footer>
-  </section>
+  </main>
 </body>
 </html>
